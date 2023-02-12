@@ -21,19 +21,18 @@ def get_page(page=0):
 
 def parse_data():
     lst_objs, new_objs = [], []
-    for i in range(11):
-        json_data= get_page(i)
+    for i in range(5):
+        json_data = get_page(i)
         jsObj = json.loads(json_data)
         lst_objs.extend(jsObj['items'])
 
 
 
     for obj in lst_objs:
-        #new_objs.append(obj)
+        # new_objs.append(obj)
          if obj['id'] not in vacancies_ids:
              new_objs.append(obj)
          vacancies_ids.add(obj['id'])
 
     return new_objs
 
-parse_data()
