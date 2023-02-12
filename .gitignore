@@ -92,3 +92,4 @@ telegram.jpg
 venv*
 
 config.py
+vac_id.db
